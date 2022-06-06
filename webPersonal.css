@@ -1,0 +1,358 @@
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* color: #424242; */
+    background-color: #fdf9f5;
+
+    /* Le ponemos estos parámetros para que sea un fullscreen real */
+    margin: 0;
+    padding: 0;
+}
+
+#bgLogo {
+    background-color: #fdf9f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#divLogo {
+    transition: 4s;
+    opacity: 1;
+    width: 250px;
+    height: auto;
+}
+
+.contacto {
+    font-family: 'Archivo Black', sans-serif;
+    color: #424242;
+    font-size: 1.3rem;
+    align-self: center;
+    text-decoration: none;
+    opacity: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.contacto:hover {
+    color: #000000;
+    border: none;
+    background-color: transparent;
+}
+
+.logo {
+    width: auto;
+    height: 25px;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: 2s;
+}
+
+.header {
+    grid-area: header;
+    padding: 45px;
+    height: 0px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.stickyHeader {
+    height: 80px;
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 2;
+    transform: translateZ(0);
+    transition: all 0.4s;
+}
+
+.principal {
+    grid-area: principal;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.moverse {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.2rem;
+    color: #424242;
+    z-index: 1;
+    transition: opacity 2s;
+    opacity: 0;
+    margin-top: -100px;
+    margin-bottom: 0px;
+}
+
+/* ___________________________________________________________________________________________ */
+
+.navLateral {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    flex-direction: column;
+    width: 1vw;
+    height: 100vh;
+    left: 20px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlateral a:hover,
+a:active,
+a:link {
+    text-decoration: none;
+    color: #424242;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #424242;
+}
+
+.nav-link svg {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-link svg:hover,
+svg:active,
+svg:link {
+    color: #424242;
+}
+
+.stickyLateral {
+    opacity: 1;
+    z-index: 2;
+    transform: translateZ(0);
+    transition: all 0.4s;
+    transition: 2s;
+}
+
+/* ___________________________________________________________________________________________ */
+#xIcon {
+    display: none;
+    top: 30px;
+    right: 45px;
+    z-index: 3;
+    position: fixed;
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.rotar {
+    transform: rotate(90deg);
+    transition: 1000ms;
+    opacity: 1;
+}
+
+#tamañoX {
+    width: 20px;
+    height: 20px;
+}
+
+#fondo {
+    top: 90px;
+    display: none;
+    background-color: #fdf9f5;
+    position: fixed;
+    width: 25vw;
+    height: 250px;
+    right: 55px;
+    z-index: 3;
+    border-radius: 10px;
+    padding: 0;
+    transition: 0.5s;
+}
+
+#NavContacto {
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    top: 45%;
+}
+
+#pContacto {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    color: #424242;
+    font-size: 1.4rem;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#ContenidoContacto {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+#ContenidoContacto > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rrss {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textoContacto {
+    color: #424242;
+    font-size: 0.75rem;
+    font-family: 'Open Sans,', sans-serif;
+    margin-top: 10px;
+}
+
+.icono {
+    width: auto;
+    height: 20px;
+}
+
+.SizeIcono {
+    margin-top: 7px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ___________________________________________________________________________________________ */
+.media {
+    grid-area: media;
+    z-index: 1;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+/* GALERÍAS */
+.divMedia {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#video1 {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#video2 {
+    object-fit: cover;
+    /*Esto simula el mismo tamaño que el resto*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.anterior {
+    left: 0;
+    cursor: url(./files/anterior.png), auto;
+}
+
+.siguiente {
+    right: 0;
+    cursor: url(./files/siguiente.png), auto;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1.5s;
+}
+
+#tercero {
+    scroll-snap-type: y mandatory;
+}
+/* ___________________________________________________________________________________________ */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.size {
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}
+
+.sizeEmail {
+    width: 80px;
+    height: auto;
+    margin: 10px;
+}
+
+.pfooter {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    width: 90vw;
+    grid-template-areas:
+        'header header header header header'
+        'principal principal principal principal principal'
+        'media media media media media'
+        'footer footer footer footer footer'
+    ;
+
+    background-size: cover;
+    background-repeat: repeat;
+    padding-bottom: 10px;
+    /* Espacio entre columnas */
+    gap: 10px;
+}
+
+/* CAMBIO DE COLOR DE LOS BOTONES DEL NAVBAR */
+.active{
+    color: rgb(50, 209, 196);
+    transform: scale(2);
+}
